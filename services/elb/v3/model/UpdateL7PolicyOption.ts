@@ -5,26 +5,26 @@ import { UpdateRedirectUrlConfig } from './UpdateRedirectUrlConfig';
 
 
 export class UpdateL7PolicyOption {
-    private 'admin_state_up'?: boolean | undefined;
+    private 'admin_state_up'?: boolean;
     public description?: string;
     public name?: string;
-    private 'redirect_listener_id'?: string | undefined;
-    private 'redirect_pool_id'?: string | undefined;
-    private 'redirect_url_config'?: UpdateRedirectUrlConfig | undefined;
-    private 'fixed_response_config'?: UpdateFixtedResponseConfig | undefined;
+    private 'redirect_listener_id'?: string;
+    private 'redirect_pool_id'?: string;
+    private 'redirect_url_config'?: UpdateRedirectUrlConfig;
+    private 'fixed_response_config'?: UpdateFixtedResponseConfig;
     public rules?: Array<CreateRuleOption>;
     public priority?: number;
-    private 'redirect_pools_config'?: Array<CreateRedirectPoolsConfig> | undefined;
+    private 'redirect_pools_config'?: Array<CreateRedirectPoolsConfig>;
     public constructor() { 
     }
     public withAdminStateUp(adminStateUp: boolean): UpdateL7PolicyOption {
         this['admin_state_up'] = adminStateUp;
         return this;
     }
-    public set adminStateUp(adminStateUp: boolean | undefined) {
+    public set adminStateUp(adminStateUp: boolean  | undefined) {
         this['admin_state_up'] = adminStateUp;
     }
-    public get adminStateUp() {
+    public get adminStateUp(): boolean | undefined {
         return this['admin_state_up'];
     }
     public withDescription(description: string): UpdateL7PolicyOption {
@@ -39,40 +39,40 @@ export class UpdateL7PolicyOption {
         this['redirect_listener_id'] = redirectListenerId;
         return this;
     }
-    public set redirectListenerId(redirectListenerId: string | undefined) {
+    public set redirectListenerId(redirectListenerId: string  | undefined) {
         this['redirect_listener_id'] = redirectListenerId;
     }
-    public get redirectListenerId() {
+    public get redirectListenerId(): string | undefined {
         return this['redirect_listener_id'];
     }
     public withRedirectPoolId(redirectPoolId: string): UpdateL7PolicyOption {
         this['redirect_pool_id'] = redirectPoolId;
         return this;
     }
-    public set redirectPoolId(redirectPoolId: string | undefined) {
+    public set redirectPoolId(redirectPoolId: string  | undefined) {
         this['redirect_pool_id'] = redirectPoolId;
     }
-    public get redirectPoolId() {
+    public get redirectPoolId(): string | undefined {
         return this['redirect_pool_id'];
     }
     public withRedirectUrlConfig(redirectUrlConfig: UpdateRedirectUrlConfig): UpdateL7PolicyOption {
         this['redirect_url_config'] = redirectUrlConfig;
         return this;
     }
-    public set redirectUrlConfig(redirectUrlConfig: UpdateRedirectUrlConfig | undefined) {
+    public set redirectUrlConfig(redirectUrlConfig: UpdateRedirectUrlConfig  | undefined) {
         this['redirect_url_config'] = redirectUrlConfig;
     }
-    public get redirectUrlConfig() {
+    public get redirectUrlConfig(): UpdateRedirectUrlConfig | undefined {
         return this['redirect_url_config'];
     }
     public withFixedResponseConfig(fixedResponseConfig: UpdateFixtedResponseConfig): UpdateL7PolicyOption {
         this['fixed_response_config'] = fixedResponseConfig;
         return this;
     }
-    public set fixedResponseConfig(fixedResponseConfig: UpdateFixtedResponseConfig | undefined) {
+    public set fixedResponseConfig(fixedResponseConfig: UpdateFixtedResponseConfig  | undefined) {
         this['fixed_response_config'] = fixedResponseConfig;
     }
-    public get fixedResponseConfig() {
+    public get fixedResponseConfig(): UpdateFixtedResponseConfig | undefined {
         return this['fixed_response_config'];
     }
     public withRules(rules: Array<CreateRuleOption>): UpdateL7PolicyOption {
@@ -87,10 +87,10 @@ export class UpdateL7PolicyOption {
         this['redirect_pools_config'] = redirectPoolsConfig;
         return this;
     }
-    public set redirectPoolsConfig(redirectPoolsConfig: Array<CreateRedirectPoolsConfig> | undefined) {
+    public set redirectPoolsConfig(redirectPoolsConfig: Array<CreateRedirectPoolsConfig>  | undefined) {
         this['redirect_pools_config'] = redirectPoolsConfig;
     }
-    public get redirectPoolsConfig() {
+    public get redirectPoolsConfig(): Array<CreateRedirectPoolsConfig> | undefined {
         return this['redirect_pools_config'];
     }
 }

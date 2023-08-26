@@ -2,14 +2,14 @@ import { Route } from './Route';
 
 
 export class Vpc {
-    public id: string;
-    public name: string;
-    public cidr: string;
-    public description: string;
-    public routes: Array<Route>;
-    public status: VpcStatusEnum;
-    private 'enterprise_project_id': string | undefined;
-    public constructor(id?: any, name?: any, cidr?: any, description?: any, routes?: any, status?: any, enterpriseProjectId?: any) { 
+    public id?: string;
+    public name?: string;
+    public cidr?: string;
+    public description?: string;
+    public routes?: Array<Route>;
+    public status?: VpcStatusEnum | string;
+    private 'enterprise_project_id'?: string;
+    public constructor(id?: string, name?: string, cidr?: string, description?: string, routes?: Array<Route>, status?: string, enterpriseProjectId?: string) { 
         this['id'] = id;
         this['name'] = name;
         this['cidr'] = cidr;
@@ -38,7 +38,7 @@ export class Vpc {
         this['routes'] = routes;
         return this;
     }
-    public withStatus(status: VpcStatusEnum): Vpc {
+    public withStatus(status: VpcStatusEnum | string): Vpc {
         this['status'] = status;
         return this;
     }
@@ -46,10 +46,10 @@ export class Vpc {
         this['enterprise_project_id'] = enterpriseProjectId;
         return this;
     }
-    public set enterpriseProjectId(enterpriseProjectId: string | undefined) {
+    public set enterpriseProjectId(enterpriseProjectId: string  | undefined) {
         this['enterprise_project_id'] = enterpriseProjectId;
     }
-    public get enterpriseProjectId() {
+    public get enterpriseProjectId(): string | undefined {
         return this['enterprise_project_id'];
     }
 }

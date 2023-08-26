@@ -1,27 +1,27 @@
 
 
 export class ListServersDetailsRequest {
-    private 'enterprise_project_id'?: string | undefined;
+    private 'enterprise_project_id'?: string;
     public flavor?: string;
     public ip?: string;
     public limit?: number;
     public name?: string;
-    private 'not-tags'?: string | undefined;
+    private 'not-tags'?: string;
     public offset?: number;
-    private 'reservation_id'?: string | undefined;
+    private 'reservation_id'?: string;
     public status?: string;
     public tags?: string;
-    private 'ip_eq'?: string | undefined;
+    private 'ip_eq'?: string;
     public constructor() { 
     }
     public withEnterpriseProjectId(enterpriseProjectId: string): ListServersDetailsRequest {
         this['enterprise_project_id'] = enterpriseProjectId;
         return this;
     }
-    public set enterpriseProjectId(enterpriseProjectId: string | undefined) {
+    public set enterpriseProjectId(enterpriseProjectId: string  | undefined) {
         this['enterprise_project_id'] = enterpriseProjectId;
     }
-    public get enterpriseProjectId() {
+    public get enterpriseProjectId(): string | undefined {
         return this['enterprise_project_id'];
     }
     public withFlavor(flavor: string): ListServersDetailsRequest {
@@ -44,10 +44,10 @@ export class ListServersDetailsRequest {
         this['not-tags'] = notTags;
         return this;
     }
-    public set notTags(notTags: string | undefined) {
+    public set notTags(notTags: string  | undefined) {
         this['not-tags'] = notTags;
     }
-    public get notTags() {
+    public get notTags(): string | undefined {
         return this['not-tags'];
     }
     public withOffset(offset: number): ListServersDetailsRequest {
@@ -58,10 +58,10 @@ export class ListServersDetailsRequest {
         this['reservation_id'] = reservationId;
         return this;
     }
-    public set reservationId(reservationId: string | undefined) {
+    public set reservationId(reservationId: string  | undefined) {
         this['reservation_id'] = reservationId;
     }
-    public get reservationId() {
+    public get reservationId(): string | undefined {
         return this['reservation_id'];
     }
     public withStatus(status: string): ListServersDetailsRequest {
@@ -76,10 +76,10 @@ export class ListServersDetailsRequest {
         this['ip_eq'] = ipEq;
         return this;
     }
-    public set ipEq(ipEq: string | undefined) {
+    public set ipEq(ipEq: string  | undefined) {
         this['ip_eq'] = ipEq;
     }
-    public get ipEq() {
+    public get ipEq(): string | undefined {
         return this['ip_eq'];
     }
 }

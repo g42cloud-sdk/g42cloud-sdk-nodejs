@@ -27,8 +27,7 @@ import HttpsProxyAgent from 'https-proxy-agent';
 import { Logger, LogLevel, getLogger } from '../logger';
 import { DefaultHttpResponse } from './DefaultHttpResponse';
 import { ExceptionResponse } from '../exception/ExceptionResponse';
-import { SdkResponse } from '../SdkResponse';
-import { ExceptionUtil } from '../exception/ExceptionUtil';
+import { SdkResponse } from '../SdkResponse'; 
 import { SdkException } from '../exception/SdkException';
 import { AKSKSigner } from '../auth/AKSKSigner';
 import { ICredential } from '../auth/ICredential';
@@ -190,7 +189,7 @@ export class DefaultHttpClient implements HttpClient {
         }
 
         if (headers['content-type'] === 'multipart/form-data') {
-            const { ['content-type']: contentType } = data.getHeaders();
+            const { 'content-type': contentType } = data.getHeaders();
             requestParams.headers = { ...requestParams.headers, 'content-type': contentType };
         }
         // set axios config baseURL

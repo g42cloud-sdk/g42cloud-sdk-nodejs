@@ -1,11 +1,11 @@
 
 
 export class InstanceRequestSpec {
-    public version: string;
-    public clusterID: string;
-    public values: { [key: string]: object; };
-    public addonTemplateName: string;
-    public constructor(version?: any, clusterID?: any, values?: any, addonTemplateName?: any) { 
+    public version?: string;
+    public clusterID?: string;
+    public values?: { [key: string]: object; };
+    public addonTemplateName?: string;
+    public constructor(version?: string, clusterID?: string, values?: { [key: string]: object; }, addonTemplateName?: string) { 
         this['version'] = version;
         this['clusterID'] = clusterID;
         this['values'] = values;

@@ -1,15 +1,15 @@
 
 
 export class AddressGroup {
-    public id: string;
-    public name: string;
-    public description: string;
-    private 'ip_set': Array<string> | undefined;
-    private 'ip_version': number | undefined;
-    private 'created_at': Date | undefined;
-    private 'updated_at': Date | undefined;
-    private 'tenant_id': string | undefined;
-    public constructor(id?: any, name?: any, description?: any, ipSet?: any, ipVersion?: any, createdAt?: any, updatedAt?: any, tenantId?: any) { 
+    public id?: string;
+    public name?: string;
+    public description?: string;
+    private 'ip_set'?: Array<string>;
+    private 'ip_version'?: number;
+    private 'created_at'?: Date;
+    private 'updated_at'?: Date;
+    private 'tenant_id'?: string;
+    public constructor(id?: string, name?: string, description?: string, ipSet?: Array<string>, ipVersion?: number, createdAt?: Date, updatedAt?: Date, tenantId?: string) { 
         this['id'] = id;
         this['name'] = name;
         this['description'] = description;
@@ -35,50 +35,50 @@ export class AddressGroup {
         this['ip_set'] = ipSet;
         return this;
     }
-    public set ipSet(ipSet: Array<string> | undefined) {
+    public set ipSet(ipSet: Array<string>  | undefined) {
         this['ip_set'] = ipSet;
     }
-    public get ipSet() {
+    public get ipSet(): Array<string> | undefined {
         return this['ip_set'];
     }
     public withIpVersion(ipVersion: number): AddressGroup {
         this['ip_version'] = ipVersion;
         return this;
     }
-    public set ipVersion(ipVersion: number | undefined) {
+    public set ipVersion(ipVersion: number  | undefined) {
         this['ip_version'] = ipVersion;
     }
-    public get ipVersion() {
+    public get ipVersion(): number | undefined {
         return this['ip_version'];
     }
     public withCreatedAt(createdAt: Date): AddressGroup {
         this['created_at'] = createdAt;
         return this;
     }
-    public set createdAt(createdAt: Date | undefined) {
+    public set createdAt(createdAt: Date  | undefined) {
         this['created_at'] = createdAt;
     }
-    public get createdAt() {
+    public get createdAt(): Date | undefined {
         return this['created_at'];
     }
     public withUpdatedAt(updatedAt: Date): AddressGroup {
         this['updated_at'] = updatedAt;
         return this;
     }
-    public set updatedAt(updatedAt: Date | undefined) {
+    public set updatedAt(updatedAt: Date  | undefined) {
         this['updated_at'] = updatedAt;
     }
-    public get updatedAt() {
+    public get updatedAt(): Date | undefined {
         return this['updated_at'];
     }
     public withTenantId(tenantId: string): AddressGroup {
         this['tenant_id'] = tenantId;
         return this;
     }
-    public set tenantId(tenantId: string | undefined) {
+    public set tenantId(tenantId: string  | undefined) {
         this['tenant_id'] = tenantId;
     }
-    public get tenantId() {
+    public get tenantId(): string | undefined {
         return this['tenant_id'];
     }
 }

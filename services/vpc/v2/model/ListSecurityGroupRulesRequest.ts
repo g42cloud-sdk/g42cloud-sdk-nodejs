@@ -3,7 +3,7 @@
 export class ListSecurityGroupRulesRequest {
     public marker?: string;
     public limit?: number;
-    private 'security_group_id'?: string | undefined;
+    private 'security_group_id'?: string;
     public constructor() { 
     }
     public withMarker(marker: string): ListSecurityGroupRulesRequest {
@@ -18,10 +18,10 @@ export class ListSecurityGroupRulesRequest {
         this['security_group_id'] = securityGroupId;
         return this;
     }
-    public set securityGroupId(securityGroupId: string | undefined) {
+    public set securityGroupId(securityGroupId: string  | undefined) {
         this['security_group_id'] = securityGroupId;
     }
-    public get securityGroupId() {
+    public get securityGroupId(): string | undefined {
         return this['security_group_id'];
     }
 }

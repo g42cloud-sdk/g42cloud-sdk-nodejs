@@ -1,12 +1,12 @@
 
 
 export class CopyImageCrossRegionRequestBody {
-    private 'agency_name': string | undefined;
+    private 'agency_name'?: string;
     public description?: string;
-    public name: string;
-    private 'project_name': string | undefined;
-    public region: string;
-    public constructor(agencyName?: any, name?: any, projectName?: any, region?: any) { 
+    public name?: string;
+    private 'project_name'?: string;
+    public region?: string;
+    public constructor(agencyName?: string, name?: string, projectName?: string, region?: string) { 
         this['agency_name'] = agencyName;
         this['name'] = name;
         this['project_name'] = projectName;
@@ -16,10 +16,10 @@ export class CopyImageCrossRegionRequestBody {
         this['agency_name'] = agencyName;
         return this;
     }
-    public set agencyName(agencyName: string | undefined) {
+    public set agencyName(agencyName: string  | undefined) {
         this['agency_name'] = agencyName;
     }
-    public get agencyName() {
+    public get agencyName(): string | undefined {
         return this['agency_name'];
     }
     public withDescription(description: string): CopyImageCrossRegionRequestBody {
@@ -34,10 +34,10 @@ export class CopyImageCrossRegionRequestBody {
         this['project_name'] = projectName;
         return this;
     }
-    public set projectName(projectName: string | undefined) {
+    public set projectName(projectName: string  | undefined) {
         this['project_name'] = projectName;
     }
-    public get projectName() {
+    public get projectName(): string | undefined {
         return this['project_name'];
     }
     public withRegion(region: string): CopyImageCrossRegionRequestBody {

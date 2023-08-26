@@ -979,7 +979,7 @@ export class EcsClient {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public listServerTags(): Promise<ListServerTagsResponse> {
+    public listServerTags(listServerTagsRequest?: ListServerTagsRequest): Promise<ListServerTagsResponse> {
         const options = ParamCreater().listServerTags();
 
          // @ts-ignore
@@ -1196,7 +1196,7 @@ export class EcsClient {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public novaListAvailabilityZones(): Promise<NovaListAvailabilityZonesResponse> {
+    public novaListAvailabilityZones(novaListAvailabilityZonesRequest?: NovaListAvailabilityZonesRequest): Promise<NovaListAvailabilityZonesResponse> {
         const options = ParamCreater().novaListAvailabilityZones();
 
          // @ts-ignore
@@ -1583,7 +1583,7 @@ export class EcsClient {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public showServerLimits(): Promise<ShowServerLimitsResponse> {
+    public showServerLimits(showServerLimitsRequest?: ShowServerLimitsRequest): Promise<ShowServerLimitsResponse> {
         const options = ParamCreater().showServerLimits();
 
          // @ts-ignore

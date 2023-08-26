@@ -1,7 +1,7 @@
 
 
 export class NodeExtendParam {
-    private 'ecs:performancetype'?: string | undefined;
+    private 'ecs:performancetype'?: string;
     public orderID?: string;
     public productID?: string;
     public maxPods?: number;
@@ -9,15 +9,15 @@ export class NodeExtendParam {
     public periodNum?: number;
     public isAutoRenew?: string;
     public isAutoPay?: string;
-    private 'DockerLVMConfigOverride'?: string | undefined;
+    private 'DockerLVMConfigOverride'?: string;
     public dockerBaseSize?: number;
     public publicKey?: string;
-    private 'alpha.cce/preInstall'?: string | undefined;
-    private 'alpha.cce/postInstall'?: string | undefined;
-    private 'alpha.cce/NodeImageID'?: string | undefined;
+    private 'alpha.cce/preInstall'?: string;
+    private 'alpha.cce/postInstall'?: string;
+    private 'alpha.cce/NodeImageID'?: string;
     public nicMultiqueue?: string;
     public nicThreshold?: string;
-    private 'enterprise_project_id'?: string | undefined;
+    private 'enterprise_project_id'?: string;
     public chargingMode?: number;
     public constructor() { 
     }
@@ -25,10 +25,10 @@ export class NodeExtendParam {
         this['ecs:performancetype'] = ecsPerformancetype;
         return this;
     }
-    public set ecsPerformancetype(ecsPerformancetype: string | undefined) {
+    public set ecsPerformancetype(ecsPerformancetype: string  | undefined) {
         this['ecs:performancetype'] = ecsPerformancetype;
     }
-    public get ecsPerformancetype() {
+    public get ecsPerformancetype(): string | undefined {
         return this['ecs:performancetype'];
     }
     public withOrderID(orderID: string): NodeExtendParam {
@@ -63,10 +63,10 @@ export class NodeExtendParam {
         this['DockerLVMConfigOverride'] = dockerLVMConfigOverride;
         return this;
     }
-    public set dockerLVMConfigOverride(dockerLVMConfigOverride: string | undefined) {
+    public set dockerLVMConfigOverride(dockerLVMConfigOverride: string  | undefined) {
         this['DockerLVMConfigOverride'] = dockerLVMConfigOverride;
     }
-    public get dockerLVMConfigOverride() {
+    public get dockerLVMConfigOverride(): string | undefined {
         return this['DockerLVMConfigOverride'];
     }
     public withDockerBaseSize(dockerBaseSize: number): NodeExtendParam {
@@ -81,30 +81,30 @@ export class NodeExtendParam {
         this['alpha.cce/preInstall'] = alphaCcePreInstall;
         return this;
     }
-    public set alphaCcePreInstall(alphaCcePreInstall: string | undefined) {
+    public set alphaCcePreInstall(alphaCcePreInstall: string  | undefined) {
         this['alpha.cce/preInstall'] = alphaCcePreInstall;
     }
-    public get alphaCcePreInstall() {
+    public get alphaCcePreInstall(): string | undefined {
         return this['alpha.cce/preInstall'];
     }
     public withAlphaCcePostInstall(alphaCcePostInstall: string): NodeExtendParam {
         this['alpha.cce/postInstall'] = alphaCcePostInstall;
         return this;
     }
-    public set alphaCcePostInstall(alphaCcePostInstall: string | undefined) {
+    public set alphaCcePostInstall(alphaCcePostInstall: string  | undefined) {
         this['alpha.cce/postInstall'] = alphaCcePostInstall;
     }
-    public get alphaCcePostInstall() {
+    public get alphaCcePostInstall(): string | undefined {
         return this['alpha.cce/postInstall'];
     }
     public withAlphaCceNodeImageID(alphaCceNodeImageID: string): NodeExtendParam {
         this['alpha.cce/NodeImageID'] = alphaCceNodeImageID;
         return this;
     }
-    public set alphaCceNodeImageID(alphaCceNodeImageID: string | undefined) {
+    public set alphaCceNodeImageID(alphaCceNodeImageID: string  | undefined) {
         this['alpha.cce/NodeImageID'] = alphaCceNodeImageID;
     }
-    public get alphaCceNodeImageID() {
+    public get alphaCceNodeImageID(): string | undefined {
         return this['alpha.cce/NodeImageID'];
     }
     public withNicMultiqueue(nicMultiqueue: string): NodeExtendParam {
@@ -119,10 +119,10 @@ export class NodeExtendParam {
         this['enterprise_project_id'] = enterpriseProjectId;
         return this;
     }
-    public set enterpriseProjectId(enterpriseProjectId: string | undefined) {
+    public set enterpriseProjectId(enterpriseProjectId: string  | undefined) {
         this['enterprise_project_id'] = enterpriseProjectId;
     }
-    public get enterpriseProjectId() {
+    public get enterpriseProjectId(): string | undefined {
         return this['enterprise_project_id'];
     }
     public withChargingMode(chargingMode: number): NodeExtendParam {

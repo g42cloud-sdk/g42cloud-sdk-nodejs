@@ -1,3 +1,23 @@
+# 0.0.8-beta 2023-08-26
+
+### G42Cloud SDK SMS
+
+- _Features_
+  - New Support SMS
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
+### G42Cloud SDK MPC
+
+- _Features_
+  - New Support MPC
+- _Bug Fix_
+  - None
+- _Change_
+  - None
+
 # 0.0.7-beta 2023-06-16
 
 ### G42Cloud SDK CCE

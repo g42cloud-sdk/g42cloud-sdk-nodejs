@@ -3,15 +3,15 @@ import { SubnetList } from './SubnetList';
 
 
 export class RouteTableResp {
-    public id: string;
-    public name: string;
-    private 'default': boolean | undefined;
-    public routes: Array<RouteTableRoute>;
-    public subnets: Array<SubnetList>;
-    private 'tenant_id': string | undefined;
-    private 'vpc_id': string | undefined;
-    public description: string;
-    public constructor(id?: any, name?: any, _default?: any, routes?: any, subnets?: any, tenantId?: any, vpcId?: any, description?: any) { 
+    public id?: string;
+    public name?: string;
+    private 'default'?: boolean;
+    public routes?: Array<RouteTableRoute>;
+    public subnets?: Array<SubnetList>;
+    private 'tenant_id'?: string;
+    private 'vpc_id'?: string;
+    public description?: string;
+    public constructor(id?: string, name?: string, _default?: boolean, routes?: Array<RouteTableRoute>, subnets?: Array<SubnetList>, tenantId?: string, vpcId?: string, description?: string) { 
         this['id'] = id;
         this['name'] = name;
         this['default'] = _default;
@@ -33,10 +33,10 @@ export class RouteTableResp {
         this['default'] = _default;
         return this;
     }
-    public set _default(_default: boolean | undefined) {
+    public set _default(_default: boolean  | undefined) {
         this['default'] = _default;
     }
-    public get _default() {
+    public get _default(): boolean | undefined {
         return this['default'];
     }
     public withRoutes(routes: Array<RouteTableRoute>): RouteTableResp {
@@ -51,20 +51,20 @@ export class RouteTableResp {
         this['tenant_id'] = tenantId;
         return this;
     }
-    public set tenantId(tenantId: string | undefined) {
+    public set tenantId(tenantId: string  | undefined) {
         this['tenant_id'] = tenantId;
     }
-    public get tenantId() {
+    public get tenantId(): string | undefined {
         return this['tenant_id'];
     }
     public withVpcId(vpcId: string): RouteTableResp {
         this['vpc_id'] = vpcId;
         return this;
     }
-    public set vpcId(vpcId: string | undefined) {
+    public set vpcId(vpcId: string  | undefined) {
         this['vpc_id'] = vpcId;
     }
-    public get vpcId() {
+    public get vpcId(): string | undefined {
         return this['vpc_id'];
     }
     public withDescription(description: string): RouteTableResp {

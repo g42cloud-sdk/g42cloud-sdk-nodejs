@@ -3,7 +3,7 @@
 export class UpdateAddressGroupOption {
     public name?: string;
     public description?: string;
-    private 'ip_set'?: Array<string> | undefined;
+    private 'ip_set'?: Array<string>;
     public constructor() { 
     }
     public withName(name: string): UpdateAddressGroupOption {
@@ -18,10 +18,10 @@ export class UpdateAddressGroupOption {
         this['ip_set'] = ipSet;
         return this;
     }
-    public set ipSet(ipSet: Array<string> | undefined) {
+    public set ipSet(ipSet: Array<string>  | undefined) {
         this['ip_set'] = ipSet;
     }
-    public get ipSet() {
+    public get ipSet(): Array<string> | undefined {
         return this['ip_set'];
     }
 }

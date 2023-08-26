@@ -1,9 +1,9 @@
 
 
 export class CreateRedirectPoolsConfig {
-    private 'pool_id': string | undefined;
-    public weight: number;
-    public constructor(poolId?: any, weight?: any) { 
+    private 'pool_id'?: string;
+    public weight?: number;
+    public constructor(poolId?: string, weight?: number) { 
         this['pool_id'] = poolId;
         this['weight'] = weight;
     }
@@ -11,10 +11,10 @@ export class CreateRedirectPoolsConfig {
         this['pool_id'] = poolId;
         return this;
     }
-    public set poolId(poolId: string | undefined) {
+    public set poolId(poolId: string  | undefined) {
         this['pool_id'] = poolId;
     }
-    public get poolId() {
+    public get poolId(): string | undefined {
         return this['pool_id'];
     }
     public withWeight(weight: number): CreateRedirectPoolsConfig {

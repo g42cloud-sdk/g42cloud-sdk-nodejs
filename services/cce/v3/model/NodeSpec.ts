@@ -10,12 +10,12 @@ import { Volume } from './Volume';
 
 
 export class NodeSpec {
-    public flavor: string;
-    public az: string;
+    public flavor?: string;
+    public az?: string;
     public os?: string;
-    public login: Login;
-    public rootVolume: Volume;
-    public dataVolumes: Array<Volume>;
+    public login?: Login;
+    public rootVolume?: Volume;
+    public dataVolumes?: Array<Volume>;
     public storage?: Storage;
     public publicIP?: NodePublicIP;
     public nodeNicSpec?: NodeNicSpec;
@@ -28,7 +28,7 @@ export class NodeSpec {
     public userTags?: Array<UserTag>;
     public runtime?: Runtime;
     public extendParam?: NodeExtendParam;
-    public constructor(flavor?: any, az?: any, login?: any, rootVolume?: any, dataVolumes?: any) { 
+    public constructor(flavor?: string, az?: string, login?: Login, rootVolume?: Volume, dataVolumes?: Array<Volume>) { 
         this['flavor'] = flavor;
         this['az'] = az;
         this['login'] = login;

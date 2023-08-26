@@ -1,18 +1,18 @@
 
 
 export class Quota {
-    private 'project_id': string | undefined;
-    public loadbalancer: number;
-    public certificate: number;
-    public listener: number;
-    public l7policy: number;
-    public pool: number;
-    public healthmonitor: number;
-    public member: number;
-    private 'members_per_pool': number | undefined;
-    public ipgroup: number;
-    private 'security_policy': number | undefined;
-    public constructor(projectId?: any, loadbalancer?: any, certificate?: any, listener?: any, l7policy?: any, pool?: any, healthmonitor?: any, member?: any, membersPerPool?: any, ipgroup?: any, securityPolicy?: any) { 
+    private 'project_id'?: string;
+    public loadbalancer?: number;
+    public certificate?: number;
+    public listener?: number;
+    public l7policy?: number;
+    public pool?: number;
+    public healthmonitor?: number;
+    public member?: number;
+    private 'members_per_pool'?: number;
+    public ipgroup?: number;
+    private 'security_policy'?: number;
+    public constructor(projectId?: string, loadbalancer?: number, certificate?: number, listener?: number, l7policy?: number, pool?: number, healthmonitor?: number, member?: number, membersPerPool?: number, ipgroup?: number, securityPolicy?: number) { 
         this['project_id'] = projectId;
         this['loadbalancer'] = loadbalancer;
         this['certificate'] = certificate;
@@ -29,10 +29,10 @@ export class Quota {
         this['project_id'] = projectId;
         return this;
     }
-    public set projectId(projectId: string | undefined) {
+    public set projectId(projectId: string  | undefined) {
         this['project_id'] = projectId;
     }
-    public get projectId() {
+    public get projectId(): string | undefined {
         return this['project_id'];
     }
     public withLoadbalancer(loadbalancer: number): Quota {
@@ -67,10 +67,10 @@ export class Quota {
         this['members_per_pool'] = membersPerPool;
         return this;
     }
-    public set membersPerPool(membersPerPool: number | undefined) {
+    public set membersPerPool(membersPerPool: number  | undefined) {
         this['members_per_pool'] = membersPerPool;
     }
-    public get membersPerPool() {
+    public get membersPerPool(): number | undefined {
         return this['members_per_pool'];
     }
     public withIpgroup(ipgroup: number): Quota {
@@ -81,10 +81,10 @@ export class Quota {
         this['security_policy'] = securityPolicy;
         return this;
     }
-    public set securityPolicy(securityPolicy: number | undefined) {
+    public set securityPolicy(securityPolicy: number  | undefined) {
         this['security_policy'] = securityPolicy;
     }
-    public get securityPolicy() {
+    public get securityPolicy(): number | undefined {
         return this['security_policy'];
     }
 }

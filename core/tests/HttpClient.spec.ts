@@ -185,4 +185,44 @@ describe('httpclient  tests', () => {
         expect(res.httpStatusCode).to.equal(200);
         expect(res).to.have.property('body');
     });
+
+    describe('extractResponse', () => {
+        it('should return a SdkStreamResponse object if content type is octet-stream', () => {
+          const httpResponse = new DefaultHttpResponse<SdkResponse>();
+          httpResponse.headers = { 'content-type': 'application/octet-stream' };
+          httpResponse.data = new Uint8Array([1, 2, 3]);
+          httpResponse.statusCode = 200;
+    
+          const client = new HcClient();
+          const response = client.extractResponse(httpResponse);
+    
+          expect(response).toBeInstanceOf(SdkStreamResponse);
+          expect(response.body).toEqual(httpResponse.data);
+          expect(response.httpStatusCode).toEqual(httpResponse.statusCode);
+        });
+    
+        it('should return an object with body and httpStatusCode properties if data is an array', () => {
+          const httpResponse = new DefaultHttpResponse<SdkResponse>();
+          httpResponse.headers = { 'content-type': 'application/json' };
+          httpResponse.data = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }];
+          httpResponse.statusCode = 200;
+    
+          const client = new HcClient();
+          const response = client.extractResponse(httpResponse);
+    
+          expect(response).toEqual({ body: httpResponse.data, httpStatusCode: httpResponse.statusCode });
+        });
+    
+        it('should return an object with httpStatusCode property if data is an object', () => {
+          const httpResponse = new DefaultHttpResponse<SdkResponse>();
+          httpResponse.headers = { 'content-type': 'application/json' };
+          httpResponse.data = { id: 1, name: 'John' };
+          httpResponse.statusCode = 200;
+    
+          const client = new HcClient();
+          const response = client.extractResponse(httpResponse);
+    
+          expect(response).toEqual({ httpStatusCode: httpResponse.statusCode, ...httpResponse.data });
+        });
+      });
 });

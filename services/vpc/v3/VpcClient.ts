@@ -409,7 +409,7 @@ export class VpcClient {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    public showSubNetworkInterfacesQuantity(): Promise<ShowSubNetworkInterfacesQuantityResponse> {
+    public showSubNetworkInterfacesQuantity(showSubNetworkInterfacesQuantityRequest?: ShowSubNetworkInterfacesQuantityRequest): Promise<ShowSubNetworkInterfacesQuantityResponse> {
         const options = ParamCreater().showSubNetworkInterfacesQuantity();
 
          // @ts-ignore

@@ -1,7 +1,7 @@
 
 
 export class UploadKieRequestBody {
-    private 'upload_file': any | undefined;
+    private 'upload_file'?: any;
     public constructor(uploadFile?: any) { 
         this['upload_file'] = uploadFile;
     }
@@ -9,10 +9,10 @@ export class UploadKieRequestBody {
         this['upload_file'] = uploadFile;
         return this;
     }
-    public set uploadFile(uploadFile: any | undefined) {
+    public set uploadFile(uploadFile: any  | undefined) {
         this['upload_file'] = uploadFile;
     }
-    public get uploadFile() {
+    public get uploadFile(): any | undefined {
         return this['upload_file'];
     }
 }

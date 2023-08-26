@@ -5,7 +5,7 @@ export class ListAddressGroupRequest {
     public marker?: string;
     public id?: Array<string>;
     public name?: Array<string>;
-    private 'ip_version'?: number | undefined;
+    private 'ip_version'?: number;
     public description?: Array<string>;
     public constructor() { 
     }
@@ -29,10 +29,10 @@ export class ListAddressGroupRequest {
         this['ip_version'] = ipVersion;
         return this;
     }
-    public set ipVersion(ipVersion: number | undefined) {
+    public set ipVersion(ipVersion: number  | undefined) {
         this['ip_version'] = ipVersion;
     }
-    public get ipVersion() {
+    public get ipVersion(): number | undefined {
         return this['ip_version'];
     }
     public withDescription(description: Array<string>): ListAddressGroupRequest {
