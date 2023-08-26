@@ -1,0 +1,23 @@
+{
+  "name": "@g42cloud/g42cloud-sdk-PRODUCT",
+  "version": "PRODUCT_VERSION",
+  "description": "G42cloud SDK for PRODUCT",
+  "main": "g42cloud-sdk-PRODUCT.js",
+  "typings": "g42cloud-sdk-PRODUCT.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g42cloud-sdk/g42cloud-sdk-nodejs"
+  },
+  "author": "G42Cloud_SDK",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@g42cloud/g42cloud-sdk-core": "^PRODUCT_VERSION"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "typescript": "^4.9.5"
+  }
+}
